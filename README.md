@@ -4,9 +4,10 @@ Projeto realizado com React e NodeJS.
 A ideia do projeto é rodar um servidor que tenha um endpoint que foi utilizado com GET recebendo um parâmetro. Este parâmetro é passado para um endereço de uma api que faz a busca por CEPs e retorna o status, endereço, bairro e estado.
 Ao rodar o projeto, você coloca o cep desejado no input e ele será enviado para a rota como parâmetro que será introduzido no endpoint da API.
 
-![Screenshot from 2022-05-29 17-46-10](https://user-images.githubusercontent.com/64399840/170890801-4e5e3e80-e9ba-44f0-93f4-382b64c8d378.png)
-![Screenshot from 2022-05-29 17-46-01](https://user-images.githubusercontent.com/64399840/170890802-bbd0e849-e47e-4ee2-ba15-9a9fc5631252.png)
-![Screenshot from 2022-05-29 17-45-56](https://user-images.githubusercontent.com/64399840/170890803-991c4138-8fc0-4cdd-8c76-a0d46716cd19.png)
+![Screenshot from 2022-05-29 17-53-50](https://user-images.githubusercontent.com/64399840/170891105-aca55540-ccfd-4904-9435-260f3dea3dd7.png)
+![Screenshot from 2022-05-29 17-53-45](https://user-images.githubusercontent.com/64399840/170891107-812f3bde-552e-400b-a84c-ecb7016e9415.png)
+![Screenshot from 2022-05-29 17-53-37](https://user-images.githubusercontent.com/64399840/170891108-ea539498-f98d-45c8-964b-1b4cb5f7b10d.png)
+
 
 
 ## Para rodar o projeto:
