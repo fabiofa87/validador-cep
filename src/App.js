@@ -1,25 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
 
-function App() {
+import axios from "axios";
+import Resultado from "../src/components/Resultado";
+import { MainContainer, ContentDiv, Form } from "../src/style/style";
+
+const App = () => {
+  const [cep, setCep] = useState("");
+  const [result, setResult] = useState({});
+
+  const getResultLength = Object.keys(result).length;
+
+  const handleCep = async (e) => {
+    setCep(e.target.value);
+  };
+
+  const handleSubmitForm = async (e) => {
+    e.preventDefault();
+    await axios.get(`http://localhost:4000/${cep}`).then((res) => {
+      setResult(res.data);
+    });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <html>
+      <MainContainer>
+        <title>Validador de CEP</title>
+        <ContentDiv>
+          <h1>VALIDADOR DE CEP</h1>
+          <Form onSubmit={handleSubmitForm}>
+            <label htmlFor="CEP">
+              CEP:
+              <input
+                onChange={handleCep}
+                required
+                pattern="[0-9]{5}-[0-9]{3}"
+                placeholder="XXXXX-XXX"
+              />
+            </label>
+            <button type="submit">Enviar</button>
+          </Form>
+          <div style={{ display: getResultLength > 0 ? "" : "none" }}>
+            {result.ok ? (
+              <Resultado resultado={result} />
+            ) : (
+              <h3>CEP não encontrado.</h3>
+            )}
+          </div>
+        </ContentDiv>
+      </MainContainer>
+    </html>
   );
-}
+};
 
 export default App;
