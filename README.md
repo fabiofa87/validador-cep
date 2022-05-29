@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Sobre o projeto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto realizado com React e NodeJS.
+A ideia do projeto é rodar um servidor que tenha um endpoint que foi utilizado com GET recebendo um parâmetro. Este parâmetro é passado para um endereço de uma api que faz a busca por CEPs e retorna o status, endereço, bairro e estado.
+Ao rodar o projeto, você coloca o cep desejado no input e ele será enviado para a rota como parâmetro que será introduzido no endpoint da API.
 
-## Available Scripts
+![Screenshot from 2022-05-29 17-46-10](https://user-images.githubusercontent.com/64399840/170890801-4e5e3e80-e9ba-44f0-93f4-382b64c8d378.png)
+![Screenshot from 2022-05-29 17-46-01](https://user-images.githubusercontent.com/64399840/170890802-bbd0e849-e47e-4ee2-ba15-9a9fc5631252.png)
+![Screenshot from 2022-05-29 17-45-56](https://user-images.githubusercontent.com/64399840/170890803-991c4138-8fc0-4cdd-8c76-a0d46716cd19.png)
 
-In the project directory, you can run:
 
-### `npm start`
+## Para rodar o projeto:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Clonar repositório
+- Yarn install / npm i
+- yarn dev / npm run dev
+- yarn start / npm run start
+- Digitar no navegador: http://localhost:4001
+- Digitar CEP desejado no input
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Scripts Disponíveis
 
-### `npm test`
+Scripts criados para facilitar a navegação:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `npm start / yarn start`
 
-### `npm run build`
+Vai iniciar o React e toda a parte de front-end do projeto.\
+Iniciar [http://localhost:4001](http://localhost:4001).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `npm test / yarn test`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Criei um simples case de teste para o endpoint. Criado com Jest e será mostrado o resultado ao rodar.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Screenshot from 2022-05-28 20-18-52](https://user-images.githubusercontent.com/64399840/170890809-b1a610c0-0be5-4189-8ca0-6be72373170f.png)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### `npm run dev / yarn dev`
+ 
+ Inicia o servidor com auxílio do Nodemon. Ao rodar será iniciado na porta 4000.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Outras dependências:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Axios
+### Styled-components
+### Nodemon
+### ExpressJS
+### Jest
+### Supertests
